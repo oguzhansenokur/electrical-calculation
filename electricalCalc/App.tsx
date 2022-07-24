@@ -18,12 +18,11 @@ const App = () => {
 
   useEffect(()=> {
 getCosts()
-  },[costs])
+  },[])
   
   const toggleBottomTable=()=>{
     setVisible(!visible)
-    setCustomerID('')
-    setUnit(0)
+   
   }
   const toggleBottom2nd=()=>{
     setToggleBottom2ndVisible(!toggleBottom2ndVisible)
@@ -112,8 +111,8 @@ const saveCost2nd=async ()=>{
     <View style={styles.container}>
      <View style={styles.content} >
       <View style={styles.upSide}  >
-         <TextInput keyboardType='numeric' placeholder='Enter Your Customer ID' value={customerID} onChangeText={handleCustomerID} style={{marginTop:30,width:'100%' , height:'13%',backgroundColor:'#fff',borderRadius:20,borderColor:'black',padding:10}} />
-         <TextInput keyboardType='numeric' placeholder='Enter Your Meter' value={unit} onChangeText={handleUnit} style={{marginTop:30,width:'50%' , height:'13%',backgroundColor:'#fff',borderRadius:20,borderColor:'black',padding:10}} />
+         <TextInput keyboardType='numeric' placeholder='Enter Your Customer ID'  onChangeText={handleCustomerID} style={{marginTop:30,width:'100%' , height:'13%',backgroundColor:'#fff',borderRadius:20,borderColor:'black',padding:10}} />
+         <TextInput keyboardType='numeric' placeholder='Enter Your Meter'  onChangeText={handleUnit} style={{marginTop:30,width:'50%' , height:'13%',backgroundColor:'#fff',borderRadius:20,borderColor:'black',padding:10}} />
 
        <View style={{margin:25}} ><Button onPress={calculateCostElectricity} title="Submit" color='blue'  /></View>  
 
